@@ -18,7 +18,7 @@ int find(int v)
     if(v == parent[v]) return v;
 
     // path compression
-    return find(parent[v]);
+    return parent[v] = find(parent[v]);
 }
 
 void Union(int a, int b)
